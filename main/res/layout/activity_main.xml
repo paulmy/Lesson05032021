@@ -5,8 +5,8 @@
               xmlns:android="http://schemas.android.com/apk/res/android">
     <Button android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="onLoad"
-            android:text="Click"/>
+            android:onClick="add"
+            android:text="Добавить"/>
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"

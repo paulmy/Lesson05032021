@@ -26,7 +26,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE + " ("
                 + COLUMN_NAME + ", " + COLUMN_YEAR
                 + ") VALUES ('Jon Weck',1985);");
-
+        db.execSQL("INSERT INTO " + TABLE + " ("
+                + COLUMN_NAME + ", " + COLUMN_YEAR
+                + ") VALUES ('Jon ',2000);");
     }
 
     @Override
