@@ -29,8 +29,8 @@ public class UserActivity extends Activity {
         btn_delete = findViewById(R.id.btn_delete);
         btn_save = findViewById(R.id.btn_save);
         sqlHelper = new DataBaseHelper(this);
-        db = sqlHelper.getWritableDatabase();
-
+        //db = sqlHelper.getWritableDatabase();
+        db = sqlHelper.open();
         Bundle extras = getIntent().getExtras();
         if (extras != null)
             userId = extras.getLong("id");
@@ -43,6 +43,9 @@ public class UserActivity extends Activity {
             name.setText(userCursor.getString(1));
             year.setText(String.valueOf(userCursor.getInt(2)));
             userCursor.close();
+
+        }
+        if (userId == 0) {
             btn_delete.setVisibility(View.GONE);
         }
         btn_save.setOnClickListener(new View.OnClickListener() {
